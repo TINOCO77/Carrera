@@ -1,0 +1,39 @@
+<!-- registro.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro a la carrera</title>
+    <!-- Enlazar el archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Crear un contenedor para centrar el contenido -->
+    <div class="container">
+        <h1>Registro a la carrera</h1>
+        <!-- Crear un carrusel con fotos -->
+        <div class="carousel">
+            <!-- Crear una lista con las fotos -->
+            <ul>
+                <!-- Cada foto debe tener un atributo src con la ruta de la imagen y un atributo alt con una descripción de la imagen -->
+                <img src="{% static 'img/foto1.jpg' %}" alt="Corredores en la salida">
+                <li><img src="img/foto2.jpg" alt="Corredores en la meta"></li>
+                <li><img src="img/foto3.jpg" alt="Corredores sonriendo"></li>
+            </ul>
+        </div>
+
+        <!-- Mostrar el formulario de registro -->
+        <form method="POST" action="{% url 'registro' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Registrar">
+        </form>
+        <!-- Crear un video que se repita en un loop -->
+        <div class="video">
+            <!-- El video debe tener un atributo src con la ruta del video y un atributo controls para mostrar los controles del video -->
+            <!-- El video debe tener un atributo loop para que se repita indefinidamente -->
+            <video src="video.mp4" controls loop></video>
+        </div>
+    </div>
+</body>
+</html>

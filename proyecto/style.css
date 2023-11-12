@@ -1,0 +1,86 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.carousel {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel ul {
+    width: 1800px;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation: slide 9s infinite;
+}
+
+.carousel ul li {
+    width: 600px;
+    height: 400px;
+    float: left;
+}
+
+.carousel ul li img {
+    width: 600px;
+    height: 400px;
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+    33% {
+        left: 0;
+    }
+    66% {
+        left: -600px;
+    }
+    100% {
+        left: -1200px;
+    }
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.video {
+    width: 600px;
+    height: 400px;
+    margin: 20px auto;
+}
+
+.video video {
+    width: 600px;
+    height: 400px;
+}
